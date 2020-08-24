@@ -1,11 +1,11 @@
 package application.mainmenu;
 
-//import application.mainmenu.newscene.FirstLevelSceneController;
-//import application.mainmenu.newscene.FirstLevelSceneModel;
-//import application.mainmenu.newscene.FirstLevelSceneView;
-//import application.mainmenu.newstage.FirstLevelStageController;
-//import application.mainmenu.newstage.FirstLevelStageModel;
-//import application.mainmenu.newstage.FirstLevelStageView;
+import application.mainmenu.newscene.FirstLevelSceneController;
+import application.mainmenu.newscene.FirstLevelSceneModel;
+import application.mainmenu.newscene.FirstLevelSceneView;
+import application.mainmenu.newstage.FirstLevelStageController;
+import application.mainmenu.newstage.FirstLevelStageModel;
+import application.mainmenu.newstage.FirstLevelStageView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -31,12 +31,12 @@ public class MainMenuController implements EventHandler<ActionEvent> {
 
         Object evt = event.getSource();
 
-//        if (evt == theView.getNewSceneButton()) {
-//            primaryStage.setScene(new FirstLevelSceneController(new FirstLevelSceneView(), new FirstLevelSceneModel(), primaryStage).getScene());
-//        }
-//        else if (evt == theView.getNewStageButton()) {
-//            new FirstLevelStageController(new FirstLevelStageView(), new FirstLevelStageModel(), primaryStage);
-//        }
+        if (evt == theView.getNewSceneButton()) {
+            primaryStage.setScene(new FirstLevelSceneController(new FirstLevelSceneView(), new FirstLevelSceneModel(), primaryStage).getScene());
+        }
+        else if (evt == theView.getNewStageButton()) {
+            new FirstLevelStageController(new FirstLevelStageView(), new FirstLevelStageModel(), primaryStage);
+        }
     }
 
     public Scene getScene() {
