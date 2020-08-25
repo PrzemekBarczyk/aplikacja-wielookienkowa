@@ -8,14 +8,21 @@ import application.mainmenu.MainMenuView;
 
 public class Main extends Application {
 
+    private static Stage primaryStage;
+
     public static void main(String[] args) {
         launch(args);
     }
 
-    public void start(Stage primaryStage) {
+    public void start(Stage stage) {
 
+        primaryStage = stage;
         primaryStage.setTitle("Aplikacja wielookienkowa");
-        primaryStage.setScene(new MainMenuController(new MainMenuView(), new MainMenuModel(), primaryStage).getScene());
+        primaryStage.setScene(new MainMenuController(new MainMenuView(), new MainMenuModel()).getScene());
         primaryStage.show();
+    }
+
+    public static Stage getPrimaryStage() {
+        return primaryStage;
     }
 }

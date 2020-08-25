@@ -1,5 +1,6 @@
 package application.mainmenu.newscene;
 
+import application.Main;
 import application.mainmenu.MainMenuController;
 import application.mainmenu.MainMenuModel;
 import application.mainmenu.MainMenuView;
@@ -16,13 +17,11 @@ import javafx.stage.Stage;
 
 public class FirstLevelSceneController implements EventHandler<ActionEvent> {
 
-    private Stage primaryStage;
     private FirstLevelSceneView theView;
     private FirstLevelSceneModel theModel;
 
-    public FirstLevelSceneController(FirstLevelSceneView theView, FirstLevelSceneModel theModel, Stage primaryStage) {
+    public FirstLevelSceneController(FirstLevelSceneView theView, FirstLevelSceneModel theModel) {
 
-        this.primaryStage = primaryStage;
         this.theView = theView;
         this.theModel = theModel;
 
@@ -35,13 +34,13 @@ public class FirstLevelSceneController implements EventHandler<ActionEvent> {
         Object evt = event.getSource();
 
 //        if (evt == theView.getNewSceneButton()) {
-//            primaryStage.setScene(new SecondLevelSceneController(new SecondLevelSceneView(), new SecondLevelSceneModel(), primaryStage).getScene());
+//            Main.getPrimaryStage().setScene(new SecondLevelSceneController(new SecondLevelSceneView(), new SecondLevelSceneModel()).getScene());
 //        }
 //        else if (evt == theView.getNewStageButton()) {
-//            new SecondLevelStageController(new SecondLevelStageView(), new SecondLevelStageModel(), primaryStage);
+//            new SecondLevelStageController(new SecondLevelStageView(), new SecondLevelStageModel());
 //        }
         if (evt == theView.getMainMenuButton()) {
-            primaryStage.setScene(new MainMenuController(new MainMenuView(), new MainMenuModel(), primaryStage).getScene());
+            Main.getPrimaryStage().setScene(new MainMenuController(new MainMenuView(), new MainMenuModel()).getScene());
         }
     }
 

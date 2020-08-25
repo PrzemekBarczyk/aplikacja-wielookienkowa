@@ -1,5 +1,6 @@
 package application.mainmenu;
 
+import application.Main;
 import application.mainmenu.newscene.FirstLevelSceneController;
 import application.mainmenu.newscene.FirstLevelSceneModel;
 import application.mainmenu.newscene.FirstLevelSceneView;
@@ -9,17 +10,14 @@ import application.mainmenu.newstage.FirstLevelStageView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
 
 public class MainMenuController implements EventHandler<ActionEvent> {
 
-    private Stage primaryStage;
     private MainMenuView theView;
     private MainMenuModel theModel;
 
-    public MainMenuController(MainMenuView theView, MainMenuModel theModel, Stage primaryStage) {
+    public MainMenuController(MainMenuView theView, MainMenuModel theModel) {
 
-        this.primaryStage = primaryStage;
         this.theView = theView;
         this.theModel = theModel;
 
@@ -32,10 +30,10 @@ public class MainMenuController implements EventHandler<ActionEvent> {
         Object evt = event.getSource();
 
         if (evt == theView.getNewSceneButton()) {
-            primaryStage.setScene(new FirstLevelSceneController(new FirstLevelSceneView(), new FirstLevelSceneModel(), primaryStage).getScene());
+            Main.getPrimaryStage().setScene(new FirstLevelSceneController(new FirstLevelSceneView(), new FirstLevelSceneModel()).getScene());
         }
         else if (evt == theView.getNewStageButton()) {
-            new FirstLevelStageController(new FirstLevelStageView(), new FirstLevelStageModel(), primaryStage);
+            new FirstLevelStageController(new FirstLevelStageView(), new FirstLevelStageModel());
         }
     }
 

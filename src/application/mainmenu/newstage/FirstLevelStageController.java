@@ -8,17 +8,14 @@ package application.mainmenu.newstage;
 //import application.mainmenu.newstage.newerstage.SecondLevelStageView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.stage.Stage;
 
 public class FirstLevelStageController implements EventHandler<ActionEvent> {
 
-    private Stage primaryStage;
     private FirstLevelStageView theView;
     private FirstLevelStageModel theModel;
 
-    public FirstLevelStageController(FirstLevelStageView theView, FirstLevelStageModel theModel, Stage primaryStage) {
+    public FirstLevelStageController(FirstLevelStageView theView, FirstLevelStageModel theModel) {
 
-        this.primaryStage = primaryStage;
         this.theView = theView;
         this.theModel = theModel;
 
@@ -31,10 +28,10 @@ public class FirstLevelStageController implements EventHandler<ActionEvent> {
         Object evt = event.getSource();
 
 //        if (evt == theView.getNewSceneButton()) {
-//            theView.setScene(new SecondLevelSceneController(new SecondLevelSceneView(), new SecondLevelSceneModel(), primaryStage).getScene());
+//            theView.setScene(new SecondLevelSceneController(new SecondLevelSceneView(), new SecondLevelSceneModel()).getScene());
 //        }
 //        else if (evt == theView.getNewStageButton()) {
-//            new SecondLevelStageController(new SecondLevelStageView(), new SecondLevelStageModel(), primaryStage);
+//            new SecondLevelStageController(new SecondLevelStageView(), new SecondLevelStageModel());
 //        }
         if (evt == theView.getMainMenuButton()) {
             theView.closeStage();
