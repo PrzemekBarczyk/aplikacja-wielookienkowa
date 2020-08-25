@@ -41,21 +41,21 @@ public class MainMenuView {
         scene = new Scene(mainPane);
     }
 
-    public void addListeners(EventHandler<ActionEvent> listener) {
+    protected void addListeners(EventHandler<ActionEvent> listener) {
 
         newSceneButton.setOnAction(listener);
         newStageButton.setOnAction(listener);
     }
 
-    public Scene getScene() {
+    protected Scene getScene() {
         return scene;
     }
 
-    public Button getNewSceneButton() {
+    protected Button getNewSceneButton() {
         return newSceneButton;
     }
 
-    public Button getNewStageButton() {
+    protected Button getNewStageButton() {
         return newStageButton;
     }
 }

@@ -52,30 +52,30 @@ public class FirstLevelStageView {
         stage.show();
     }
 
-    public void addListeners(EventHandler<ActionEvent> listener) {
+    protected void addListeners(EventHandler<ActionEvent> listener) {
 
         newSceneButton.setOnAction(listener);
         newStageButton.setOnAction(listener);
         mainMenuButton.setOnAction(listener);
     }
 
-    public void closeStage() {
+    protected void closeStage() {
         stage.close();
     }
 
-    public void setScene(Scene newScene) {
+    protected void setScene(Scene newScene) {
         stage.setScene(newScene);
     }
 
-    public Button getNewSceneButton() {
+    protected Button getNewSceneButton() {
         return newSceneButton;
     }
 
-    public Button getNewStageButton() {
+    protected Button getNewStageButton() {
         return newStageButton;
     }
 
-    public Button getMainMenuButton() {
+    protected Button getMainMenuButton() {
         return mainMenuButton;
     }
 }
