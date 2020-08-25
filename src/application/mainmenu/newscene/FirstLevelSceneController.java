@@ -13,7 +13,6 @@ import application.mainmenu.MainMenuView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
 
 public class FirstLevelSceneController implements EventHandler<ActionEvent> {
 
@@ -34,13 +33,13 @@ public class FirstLevelSceneController implements EventHandler<ActionEvent> {
         Object evt = event.getSource();
 
 //        if (evt == theView.getNewSceneButton()) {
-//            Main.getPrimaryStage().setScene(new SecondLevelSceneController(new SecondLevelSceneView(), new SecondLevelSceneModel()).getScene());
+//            Main.setScene(new SecondLevelSceneController(new SecondLevelSceneView(), new SecondLevelSceneModel()).getScene());
 //        }
 //        else if (evt == theView.getNewStageButton()) {
 //            new SecondLevelStageController(new SecondLevelStageView(), new SecondLevelStageModel());
 //        }
         if (evt == theView.getMainMenuButton()) {
-            Main.getPrimaryStage().setScene(new MainMenuController(new MainMenuView(), new MainMenuModel()).getScene());
+            Main.setScene(new MainMenuController(new MainMenuView(), new MainMenuModel()).getScene());
         }
     }
 

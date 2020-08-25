@@ -30,7 +30,7 @@ public class MainMenuController implements EventHandler<ActionEvent> {
         Object evt = event.getSource();
 
         if (evt == theView.getNewSceneButton()) {
-            Main.getPrimaryStage().setScene(new FirstLevelSceneController(new FirstLevelSceneView(), new FirstLevelSceneModel()).getScene());
+            Main.setScene(new FirstLevelSceneController(new FirstLevelSceneView(), new FirstLevelSceneModel()).getScene());
         }
         else if (evt == theView.getNewStageButton()) {
             new FirstLevelStageController(new FirstLevelStageView(), new FirstLevelStageModel());

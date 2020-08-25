@@ -63,8 +63,8 @@ public class FirstLevelStageView {
         stage.close();
     }
 
-    public Stage getStage() {
-        return stage;
+    public void setScene(Scene newScene) {
+        stage.setScene(newScene);
     }
 
     public Button getNewSceneButton() {

@@ -1,6 +1,7 @@
 package application;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 import application.mainmenu.MainMenuController;
 import application.mainmenu.MainMenuModel;
@@ -22,7 +23,7 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    public static Stage getPrimaryStage() {
-        return primaryStage;
+    public static void setScene(Scene newScene) {
+        primaryStage.setScene(newScene);
     }
 }
