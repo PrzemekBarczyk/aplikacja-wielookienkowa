@@ -1,4 +1,4 @@
-package application.mainmenu.newscene;
+package main.mainmenu.scene1;
 
 public class FirstLevelSceneModel {
 }

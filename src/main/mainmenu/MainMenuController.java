@@ -1,12 +1,12 @@
-package application.mainmenu;
+package main.mainmenu;
 
-import application.Main;
-import application.mainmenu.newscene.FirstLevelSceneController;
-import application.mainmenu.newscene.FirstLevelSceneModel;
-import application.mainmenu.newscene.FirstLevelSceneView;
-import application.mainmenu.newstage.FirstLevelStageController;
-import application.mainmenu.newstage.FirstLevelStageModel;
-import application.mainmenu.newstage.FirstLevelStageView;
+import main.Main;
+import main.mainmenu.scene1.FirstLevelSceneController;
+import main.mainmenu.scene1.FirstLevelSceneModel;
+import main.mainmenu.scene1.FirstLevelSceneView;
+import main.mainmenu.stage1.FirstLevelStageController;
+import main.mainmenu.stage1.FirstLevelStageModel;
+import main.mainmenu.stage1.FirstLevelStageView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;

@@ -1,4 +1,4 @@
-package application.mainmenu.newstage;
+package main.mainmenu.stage1;
 
 public class FirstLevelStageModel {
 }

@@ -1,4 +1,4 @@
-package application.mainmenu.newstage;
+package main.mainmenu.stage1;
 
 //import application.mainmenu.newstage.newerscene.SecondLevelSceneController;
 //import application.mainmenu.newstage.newerscene.SecondLevelSceneModel;

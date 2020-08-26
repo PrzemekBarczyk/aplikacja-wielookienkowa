@@ -1,11 +1,11 @@
-package application;
+package main;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import application.mainmenu.MainMenuController;
-import application.mainmenu.MainMenuModel;
-import application.mainmenu.MainMenuView;
+import main.mainmenu.MainMenuController;
+import main.mainmenu.MainMenuModel;
+import main.mainmenu.MainMenuView;
 
 public class Main extends Application {
 
