@@ -1,4 +1,4 @@
 package main.mainmenu;
 
-public class MainMenuModel {
+class MainMenuModel {
 }

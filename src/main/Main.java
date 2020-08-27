@@ -4,8 +4,6 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import main.mainmenu.MainMenuController;
-import main.mainmenu.MainMenuModel;
-import main.mainmenu.MainMenuView;
 
 public class Main extends Application {
 
@@ -19,7 +17,7 @@ public class Main extends Application {
 
         primaryStage = stage;
         primaryStage.setTitle("Aplikacja wielookienkowa");
-        primaryStage.setScene(new MainMenuController(new MainMenuView(), new MainMenuModel()).getScene());
+        primaryStage.setScene(new MainMenuController().getScene());
         primaryStage.show();
     }
 

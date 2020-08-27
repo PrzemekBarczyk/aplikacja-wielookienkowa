@@ -12,14 +12,14 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class FirstLevelStageView {
+class FirstLevelStageView {
 
     private Stage stage;
     private Button newSceneButton;
     private Button newStageButton;
     private Button mainMenuButton;
 
-    public FirstLevelStageView() {
+    FirstLevelStageView() {
 
         stage = new Stage();
         stage.setTitle("Stage lvl 1");
@@ -52,30 +52,30 @@ public class FirstLevelStageView {
         stage.show();
     }
 
-    protected void addListeners(EventHandler<ActionEvent> listener) {
+    void addListeners(EventHandler<ActionEvent> listener) {
 
         newSceneButton.setOnAction(listener);
         newStageButton.setOnAction(listener);
         mainMenuButton.setOnAction(listener);
     }
 
-    protected void closeStage() {
+    void closeStage() {
         stage.close();
     }
 
-    protected void setScene(Scene newScene) {
+    void setScene(Scene newScene) {
         stage.setScene(newScene);
     }
 
-    protected Button getNewSceneButton() {
+    Button getNewSceneButton() {
         return newSceneButton;
     }
 
-    protected Button getNewStageButton() {
+    Button getNewStageButton() {
         return newStageButton;
     }
 
-    protected Button getMainMenuButton() {
+    Button getMainMenuButton() {
         return mainMenuButton;
     }
 }

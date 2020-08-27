@@ -11,14 +11,14 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-public class FirstLevelSceneView {
+class FirstLevelSceneView {
 
     private Scene scene;
     private Button newSceneButton;
     private Button newStageButton;
     private Button mainMenuButton;
 
-    public FirstLevelSceneView() {
+    FirstLevelSceneView() {
 
         GridPane mainPane = new GridPane();
         mainPane.setAlignment(Pos.CENTER);
@@ -46,26 +46,26 @@ public class FirstLevelSceneView {
         scene = new Scene(mainPane);
     }
 
-    protected void addListeners(EventHandler<ActionEvent> listener) {
+    void addListeners(EventHandler<ActionEvent> listener) {
 
         newSceneButton.setOnAction(listener);
         newStageButton.setOnAction(listener);
         mainMenuButton.setOnAction(listener);
     }
 
-    protected Scene getScene() {
+    Scene getScene() {
         return scene;
     }
 
-    protected Button getNewSceneButton() {
+    Button getNewSceneButton() {
         return newSceneButton;
     }
 
-    protected Button getNewStageButton() {
+    Button getNewStageButton() {
         return newStageButton;
     }
 
-    protected Button getMainMenuButton() {
+    Button getMainMenuButton() {
         return mainMenuButton;
     }
 }

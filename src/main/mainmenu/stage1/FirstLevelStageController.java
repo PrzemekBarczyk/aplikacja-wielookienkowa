@@ -1,11 +1,7 @@
 package main.mainmenu.stage1;
 
-//import application.mainmenu.newstage.newerscene.SecondLevelSceneController;
-//import application.mainmenu.newstage.newerscene.SecondLevelSceneModel;
-//import application.mainmenu.newstage.newerscene.SecondLevelSceneView;
-//import application.mainmenu.newstage.newerstage.SecondLevelStageController;
-//import application.mainmenu.newstage.newerstage.SecondLevelStageModel;
-//import application.mainmenu.newstage.newerstage.SecondLevelStageView;
+//import main.mainmenu.stage1.scene2.SecondLevelSceneController;
+//import main.mainmenu.stage1.stage2.SecondLevelStageController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -15,10 +11,10 @@ public class FirstLevelStageController implements EventHandler<ActionEvent> {
     private FirstLevelStageView theView;
     private FirstLevelStageModel theModel;
 
-    public FirstLevelStageController(FirstLevelStageView theView, FirstLevelStageModel theModel) {
+    public FirstLevelStageController() {
 
-        this.theView = theView;
-        this.theModel = theModel;
+        this.theView = new FirstLevelStageView();
+        this.theModel = new FirstLevelStageModel();
 
         this.theView.addListeners(this);
     }
@@ -29,10 +25,10 @@ public class FirstLevelStageController implements EventHandler<ActionEvent> {
         Object evt = event.getSource();
 
 //        if (evt == theView.getNewSceneButton()) {
-//            this.setScene(new SecondLevelSceneController(new SecondLevelSceneView(), new SecondLevelSceneModel()).getScene());
+//            this.setScene(new SecondLevelSceneController().getScene());
 //        }
 //        else if (evt == theView.getNewStageButton()) {
-//            new SecondLevelStageController(new SecondLevelStageView(), new SecondLevelStageModel());
+//            new SecondLevelStageController();
 //        }
         if (evt == theView.getMainMenuButton()) {
             this.closeStage();

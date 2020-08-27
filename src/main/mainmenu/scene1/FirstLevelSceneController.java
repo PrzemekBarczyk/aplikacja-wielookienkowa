@@ -2,14 +2,8 @@ package main.mainmenu.scene1;
 
 import main.Main;
 import main.mainmenu.MainMenuController;
-import main.mainmenu.MainMenuModel;
-import main.mainmenu.MainMenuView;
-//import application.mainmenu.newscene.newerscene.SecondLevelSceneController;
-//import application.mainmenu.newscene.newerscene.SecondLevelSceneModel;
-//import application.mainmenu.newscene.newerscene.SecondLevelSceneView;
-//import application.mainmenu.newscene.newerstage.SecondLevelStageController;
-//import application.mainmenu.newscene.newerstage.SecondLevelStageModel;
-//import application.mainmenu.newscene.newerstage.SecondLevelStageView;
+//import main.mainmenu.scene1.scene2.SecondLevelSceneController;
+//import main.mainmenu.scene1.stage2.SecondLevelStageController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -19,10 +13,10 @@ public class FirstLevelSceneController implements EventHandler<ActionEvent> {
     private FirstLevelSceneView theView;
     private FirstLevelSceneModel theModel;
 
-    public FirstLevelSceneController(FirstLevelSceneView theView, FirstLevelSceneModel theModel) {
+    public FirstLevelSceneController() {
 
-        this.theView = theView;
-        this.theModel = theModel;
+        this.theView = new FirstLevelSceneView();
+        this.theModel = new FirstLevelSceneModel();
 
         this.theView.addListeners(this);
     }
@@ -33,13 +27,13 @@ public class FirstLevelSceneController implements EventHandler<ActionEvent> {
         Object evt = event.getSource();
 
 //        if (evt == theView.getNewSceneButton()) {
-//            Main.setScene(new SecondLevelSceneController(new SecondLevelSceneView(), new SecondLevelSceneModel()).getScene());
+//            Main.setScene(new SecondLevelSceneController().getScene());
 //        }
 //        else if (evt == theView.getNewStageButton()) {
-//            new SecondLevelStageController(new SecondLevelStageView(), new SecondLevelStageModel());
+//            new SecondLevelStageController();
 //        }
         if (evt == theView.getMainMenuButton()) {
-            Main.setScene(new MainMenuController(new MainMenuView(), new MainMenuModel()).getScene());
+            Main.setScene(new MainMenuController().getScene());
         }
     }
 
