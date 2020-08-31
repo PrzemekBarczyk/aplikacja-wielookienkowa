@@ -1,7 +1,7 @@
 package main.mainmenu.stage1;
 
-//import main.mainmenu.stage1.scene2.SecondLevelSceneController;
-//import main.mainmenu.stage1.stage2.SecondLevelStageController;
+import main.mainmenu.stage1.scene2.SecondLevelSceneController;
+import main.mainmenu.stage1.stage2.SecondLevelStageController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -24,13 +24,13 @@ public class FirstLevelStageController implements EventHandler<ActionEvent> {
 
         Object evt = event.getSource();
 
-//        if (evt == theView.getNewSceneButton()) {
-//            this.setScene(new SecondLevelSceneController().getScene());
-//        }
-//        else if (evt == theView.getNewStageButton()) {
-//            new SecondLevelStageController();
-//        }
-        if (evt == theView.getMainMenuButton()) {
+        if (evt == theView.getNewSceneButton()) {
+            this.setScene(new SecondLevelSceneController().getScene());
+        }
+        else if (evt == theView.getNewStageButton()) {
+            new SecondLevelStageController();
+        }
+        else {
             this.closeStage();
         }
     }
